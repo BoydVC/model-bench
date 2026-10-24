@@ -1,0 +1,44 @@
+{
+  "id": "token-bucket",
+  "title": "Token bucket the tests can clock",
+  "category": "coding",
+  "starter": true,
+  "order": 5,
+  "summary": "The agent gateway needs a limiter. Tests pass a fake clock, so the bucket cannot call the real time.",
+  "whatWeTest": [
+    "The bucket starts full and refuses once it is empty.",
+    "Tokens refill from elapsed milliseconds and never exceed capacity.",
+    "A clock that jumps backwards does not mint tokens."
+  ],
+  "outputHint": "Reply with one ```js fence that assigns functions on module.exports. No other text.",
+  "fixtures": [],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.5,
+      "prompt": "Does the solution do what the task asked, including the edge cases?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Does it follow the output contract and the constraints a test might only partly see?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.2,
+      "prompt": "Could a teammate maintain this without a rewrite?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

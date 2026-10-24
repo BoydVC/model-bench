@@ -1,0 +1,51 @@
+import {
+  BUCKET_FLASH,
+  DIFF_FLASH,
+  REDACT_FLASH,
+  RETRY_FLASH,
+  REVIEW_FLASH,
+  SCHEMA_FLASH,
+  fence,
+} from "./code";
+import {
+  DEDUPE_FLASH,
+  INVOICE_FLASH,
+  LOGS_FLASH,
+  RISKS_FLASH,
+  ROSTER_FLASH,
+  TAXONOMY_FLASH,
+  jsonBlock,
+} from "./data";
+import {
+  ADR_FLASH,
+  CHANGELOG_FLASH,
+  EXEC_FLASH,
+  INCIDENT_FLASH,
+  ONBOARD_FLASH,
+  QUESTIONS_FLASH,
+  THEMES_FLASH,
+  VENDOR_FLASH,
+} from "./prose";
+
+export const cedarFlash: Record<string, string> = {
+  "retry-helper": fence("js", RETRY_FLASH),
+  "redact-secrets": fence("js", REDACT_FLASH),
+  "meeting-tool-schema": JSON.stringify(SCHEMA_FLASH, null, 2),
+  "csv-row-diff": fence("js", DIFF_FLASH),
+  "token-bucket": fence("js", BUCKET_FLASH),
+  "review-risky-diff": JSON.stringify(REVIEW_FLASH, null, 2),
+  "incident-note": INCIDENT_FLASH,
+  "adr-eval-harness": ADR_FLASH,
+  "exec-status": EXEC_FLASH,
+  "api-changelog": CHANGELOG_FLASH,
+  "staff-onboarding": ONBOARD_FLASH,
+  "vendor-decision-brief": VENDOR_FLASH,
+  "questionnaire-risks": JSON.stringify(RISKS_FLASH, null, 2),
+  "postmortem-themes": THEMES_FLASH,
+  "procurement-questions": QUESTIONS_FLASH,
+  "roster-cleanup": jsonBlock(ROSTER_FLASH),
+  "ticket-dedupe": jsonBlock(DEDUPE_FLASH),
+  "invoice-reconcile": jsonBlock(INVOICE_FLASH),
+  "request-taxonomy": jsonBlock(TAXONOMY_FLASH),
+  "log-to-incidents": jsonBlock(LOGS_FLASH),
+};

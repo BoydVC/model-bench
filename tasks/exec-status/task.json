@@ -1,0 +1,86 @@
+{
+  "id": "exec-status",
+  "title": "Exec status without the private aside",
+  "category": "writing",
+  "starter": true,
+  "order": 9,
+  "summary": "The weekly note has a real slip and a real mitigation. It also has a performance aside and a joke that must not leave the room.",
+  "whatWeTest": [
+    "The billing migration slip and the feature-flag mitigation are both stated.",
+    "Jordan's performance plan and the ping-pong joke are absent.",
+    "The note is short enough to read in a staff meeting."
+  ],
+  "outputHint": "Reply in markdown. Use the headings the task names. Do not add a preamble.",
+  "fixtures": [
+    "fixtures/week.md"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Fidelity",
+      "weight": 0.35,
+      "prompt": "Are the facts from the source present, and are invented facts absent?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.4,
+      "prompt": "Does it follow the audience, the required sections, and the things it must not say?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.25,
+      "prompt": "Would a director forward this without rewriting it?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.35,
+    "judge": 0.65
+  },
+  "checks": [
+    {
+      "type": "contains",
+      "id": "migration",
+      "value": "billing migration",
+      "points": 2
+    },
+    {
+      "type": "contains",
+      "id": "slipped",
+      "value": "slipped",
+      "points": 2
+    },
+    {
+      "type": "contains",
+      "id": "flag",
+      "value": "feature flag",
+      "points": 2
+    },
+    {
+      "type": "not_contains",
+      "id": "no-jordan",
+      "value": "Jordan",
+      "points": 3
+    },
+    {
+      "type": "not_contains",
+      "id": "no-plan",
+      "value": "performance plan",
+      "points": 3
+    },
+    {
+      "type": "not_contains",
+      "id": "no-joke",
+      "value": "ping-pong",
+      "points": 2
+    },
+    {
+      "type": "word_count",
+      "id": "length",
+      "min": 80,
+      "max": 260,
+      "points": 2
+    }
+  ]
+}

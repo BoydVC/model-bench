@@ -1,0 +1,47 @@
+{
+  "id": "review-risky-diff",
+  "title": "Review a small, risky pull request",
+  "category": "coding",
+  "starter": true,
+  "order": 6,
+  "summary": "A director will not read the whole patch. The review has to name the secret in the logs and the SQL concatenation, and ignore the copyright bump.",
+  "whatWeTest": [
+    "The answer is JSON with a findings array.",
+    "Logging the vendor key in src/api.ts is a high-severity finding.",
+    "Concatenating request input into SQL in src/search.ts is a finding.",
+    "The copyright header is not filed as a finding."
+  ],
+  "outputHint": "Reply with one JSON object and no markdown fence.",
+  "fixtures": [
+    "fixtures/pr.diff"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.5,
+      "prompt": "Does the solution do what the task asked, including the edge cases?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Does it follow the output contract and the constraints a test might only partly see?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.2,
+      "prompt": "Could a teammate maintain this without a rewrite?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

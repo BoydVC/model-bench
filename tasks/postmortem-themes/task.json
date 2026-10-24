@@ -1,0 +1,93 @@
+{
+  "id": "postmortem-themes",
+  "title": "Shared themes across two postmortems",
+  "category": "research",
+  "starter": true,
+  "order": 14,
+  "summary": "Billing and auth failed differently and rhymed. The brief has to name the shared gaps and leave the on-call's name out.",
+  "whatWeTest": [
+    "Themes, Evidence, and What to change are present.",
+    "Both services show up, along with rollback and the alert threshold.",
+    "The on-call is not named."
+  ],
+  "outputHint": "Reply in markdown. Use the headings the task names. Do not add a preamble.",
+  "fixtures": [
+    "fixtures/postmortems.md"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Fidelity",
+      "weight": 0.45,
+      "prompt": "Are the claims grounded in the source, with gaps marked instead of filled in?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.35,
+      "prompt": "Does it answer the decision the director actually has to make?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.2,
+      "prompt": "Can someone scan this in a few minutes and know what to do?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.5,
+    "judge": 0.5
+  },
+  "checks": [
+    {
+      "type": "contains",
+      "id": "themes",
+      "value": "## Themes"
+    },
+    {
+      "type": "contains",
+      "id": "evidence",
+      "value": "## Evidence"
+    },
+    {
+      "type": "contains",
+      "id": "change",
+      "value": "## What to change"
+    },
+    {
+      "type": "contains",
+      "id": "billing",
+      "value": "billing"
+    },
+    {
+      "type": "contains",
+      "id": "auth",
+      "value": "auth"
+    },
+    {
+      "type": "contains",
+      "id": "rollback",
+      "value": "rollback",
+      "points": 2
+    },
+    {
+      "type": "contains",
+      "id": "threshold",
+      "value": "threshold",
+      "points": 2
+    },
+    {
+      "type": "not_contains",
+      "id": "no-mateo",
+      "value": "Mateo",
+      "points": 4
+    },
+    {
+      "type": "word_count",
+      "id": "length",
+      "min": 100,
+      "max": 500,
+      "points": 2
+    }
+  ]
+}

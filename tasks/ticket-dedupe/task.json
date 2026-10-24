@@ -1,0 +1,46 @@
+{
+  "id": "ticket-dedupe",
+  "title": "Dedupe a weekend of support tickets",
+  "category": "data",
+  "starter": true,
+  "order": 17,
+  "summary": "The same person files the same subject twice in a day. A different person with the same subject is a different ticket.",
+  "whatWeTest": [
+    "Same requester and the same normalized subject inside 24 hours collapse to the earlier id.",
+    "Subject comparison ignores case and punctuation.",
+    "A different requester is never merged, and a repeat after 24 hours stays separate."
+  ],
+  "outputHint": "Reply with one ```json fence and no other text.",
+  "fixtures": [
+    "fixtures/tickets.json"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.55,
+      "prompt": "Does the structured result follow the cleanup rules?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Is the output the requested JSON shape and nothing else?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.15,
+      "prompt": "Are the field values unambiguous?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

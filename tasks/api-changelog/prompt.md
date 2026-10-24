@@ -1,0 +1,1 @@
+Write the customer changelog for the changes in the fixture. Use the headings Added, Changed, and Fixed. Name the deprecation of GET /v1/teams and the replacement GET /v2/orgs. Do not leave TODO markers.

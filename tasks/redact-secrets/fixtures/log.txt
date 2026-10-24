@@ -1,0 +1,7 @@
+ticket 4412
+Authorization: Bearer abcdEFGH1234
+vendor key sk-live-abc12345
+aws AKIAIOSFODNN7EXAMPLE
+callback https://hooks.example.com/cb?password=hunter2&x=1
+note: ask Mei to reset your password tomorrow
+contact mei.chen@example.com

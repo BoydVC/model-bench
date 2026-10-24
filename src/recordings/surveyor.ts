@@ -1,0 +1,51 @@
+import {
+  BUCKET_SURVEYOR,
+  DIFF_SURVEYOR,
+  REDACT_SURVEYOR,
+  RETRY_SURVEYOR,
+  REVIEW_SURVEYOR,
+  SCHEMA_SURVEYOR,
+  fence,
+} from "./code";
+import {
+  DEDUPE_SURVEYOR,
+  INVOICE_SURVEYOR,
+  LOGS_SURVEYOR,
+  RISKS_SURVEYOR,
+  ROSTER_SURVEYOR,
+  TAXONOMY_SURVEYOR,
+  jsonBlock,
+} from "./data";
+import {
+  ADR_SURVEYOR,
+  CHANGELOG_SURVEYOR,
+  EXEC_SURVEYOR,
+  INCIDENT_SURVEYOR,
+  ONBOARD_SURVEYOR,
+  QUESTIONS_SURVEYOR,
+  THEMES_SURVEYOR,
+  VENDOR_SURVEYOR,
+} from "./prose";
+
+export const surveyor: Record<string, string> = {
+  "retry-helper": fence("js", RETRY_SURVEYOR),
+  "redact-secrets": fence("js", REDACT_SURVEYOR),
+  "meeting-tool-schema": JSON.stringify(SCHEMA_SURVEYOR, null, 2),
+  "csv-row-diff": fence("js", DIFF_SURVEYOR),
+  "token-bucket": fence("js", BUCKET_SURVEYOR),
+  "review-risky-diff": JSON.stringify(REVIEW_SURVEYOR, null, 2),
+  "incident-note": INCIDENT_SURVEYOR,
+  "adr-eval-harness": ADR_SURVEYOR,
+  "exec-status": EXEC_SURVEYOR,
+  "api-changelog": CHANGELOG_SURVEYOR,
+  "staff-onboarding": ONBOARD_SURVEYOR,
+  "vendor-decision-brief": VENDOR_SURVEYOR,
+  "questionnaire-risks": JSON.stringify(RISKS_SURVEYOR, null, 2),
+  "postmortem-themes": THEMES_SURVEYOR,
+  "procurement-questions": QUESTIONS_SURVEYOR,
+  "roster-cleanup": jsonBlock(ROSTER_SURVEYOR),
+  "ticket-dedupe": jsonBlock(DEDUPE_SURVEYOR),
+  "invoice-reconcile": jsonBlock(INVOICE_SURVEYOR),
+  "request-taxonomy": jsonBlock(TAXONOMY_SURVEYOR),
+  "log-to-incidents": jsonBlock(LOGS_SURVEYOR),
+};

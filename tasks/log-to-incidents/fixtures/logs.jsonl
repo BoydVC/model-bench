@@ -1,0 +1,6 @@
+{"ts":"2026-06-01T12:00:00Z","level":"info","service":"billing","trace":"tr_a","message":"invoice batch started"}
+{"ts":"2026-06-01T12:00:02Z","level":"error","service":"billing","trace":"tr_b","message":"currency column missing"}
+{"ts":"2026-06-01T12:00:03Z","level":"error","service":"billing","trace":"tr_b","message":"retry failed"}
+{"ts":"2026-06-01T12:00:04Z","level":"info","service":"auth","trace":"tr_c","message":"login ok"}
+{"ts":"2026-06-01T12:00:05Z","level":"error","service":"auth","trace":"tr_d","message":"jwks timeout"}
+{"ts":"2026-06-01T12:00:06Z","level":"error","service":"billing","trace":"tr_b","message":"gave up"}

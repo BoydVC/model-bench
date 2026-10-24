@@ -1,0 +1,51 @@
+import {
+  BUCKET_INKWELL,
+  DIFF_INKWELL,
+  REDACT_INKWELL,
+  RETRY_INKWELL,
+  REVIEW_INKWELL,
+  SCHEMA_INKWELL,
+  fence,
+} from "./code";
+import {
+  DEDUPE_INKWELL,
+  INVOICE_INKWELL,
+  LOGS_INKWELL,
+  RISKS_INKWELL,
+  ROSTER_INKWELL,
+  TAXONOMY_INKWELL,
+  jsonBlock,
+} from "./data";
+import {
+  ADR_INKWELL,
+  CHANGELOG_INKWELL,
+  EXEC_INKWELL,
+  INCIDENT_INKWELL,
+  ONBOARD_INKWELL,
+  QUESTIONS_INKWELL,
+  THEMES_INKWELL,
+  VENDOR_INKWELL,
+} from "./prose";
+
+export const inkwell: Record<string, string> = {
+  "retry-helper": fence("js", RETRY_INKWELL),
+  "redact-secrets": fence("js", REDACT_INKWELL),
+  "meeting-tool-schema": JSON.stringify(SCHEMA_INKWELL, null, 2),
+  "csv-row-diff": DIFF_INKWELL.trim(),
+  "token-bucket": fence("js", BUCKET_INKWELL),
+  "review-risky-diff": REVIEW_INKWELL.trim(),
+  "incident-note": INCIDENT_INKWELL,
+  "adr-eval-harness": ADR_INKWELL,
+  "exec-status": EXEC_INKWELL,
+  "api-changelog": CHANGELOG_INKWELL,
+  "staff-onboarding": ONBOARD_INKWELL,
+  "vendor-decision-brief": VENDOR_INKWELL,
+  "questionnaire-risks": JSON.stringify(RISKS_INKWELL, null, 2),
+  "postmortem-themes": THEMES_INKWELL,
+  "procurement-questions": QUESTIONS_INKWELL,
+  "roster-cleanup": jsonBlock(ROSTER_INKWELL),
+  "ticket-dedupe": jsonBlock(DEDUPE_INKWELL),
+  "invoice-reconcile": jsonBlock(INVOICE_INKWELL),
+  "request-taxonomy": jsonBlock(TAXONOMY_INKWELL),
+  "log-to-incidents": jsonBlock(LOGS_INKWELL),
+};

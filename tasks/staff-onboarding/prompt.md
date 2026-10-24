@@ -1,0 +1,1 @@
+Write the onboarding note for a staff engineer joining the platform team. Use the headings First week, Systems, How we decide, and People. Mention the on-call rotation and the agent-tools repo by that name. Use the fixture. Do not invent extra systems.

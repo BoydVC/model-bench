@@ -1,0 +1,51 @@
+import {
+  BUCKET_PRO,
+  DIFF_PRO,
+  REDACT_PRO,
+  RETRY_PRO,
+  REVIEW_PRO,
+  SCHEMA_PRO,
+  fence,
+} from "./code";
+import {
+  DEDUPE_PRO,
+  INVOICE_PRO,
+  LOGS_PRO,
+  RISKS_PRO,
+  ROSTER_PRO,
+  TAXONOMY_PRO,
+  jsonBlock,
+} from "./data";
+import {
+  ADR_PRO,
+  CHANGELOG_PRO,
+  EXEC_PRO,
+  INCIDENT_PRO,
+  ONBOARD_PRO,
+  QUESTIONS_PRO,
+  THEMES_PRO,
+  VENDOR_PRO,
+} from "./prose";
+
+export const cedarPro: Record<string, string> = {
+  "retry-helper": fence("js", RETRY_PRO),
+  "redact-secrets": fence("js", REDACT_PRO),
+  "meeting-tool-schema": JSON.stringify(SCHEMA_PRO, null, 2),
+  "csv-row-diff": fence("js", DIFF_PRO),
+  "token-bucket": fence("js", BUCKET_PRO),
+  "review-risky-diff": JSON.stringify(REVIEW_PRO, null, 2),
+  "incident-note": INCIDENT_PRO,
+  "adr-eval-harness": ADR_PRO,
+  "exec-status": EXEC_PRO,
+  "api-changelog": CHANGELOG_PRO,
+  "staff-onboarding": ONBOARD_PRO,
+  "vendor-decision-brief": VENDOR_PRO,
+  "questionnaire-risks": JSON.stringify(RISKS_PRO, null, 2),
+  "postmortem-themes": THEMES_PRO,
+  "procurement-questions": QUESTIONS_PRO,
+  "roster-cleanup": jsonBlock(ROSTER_PRO),
+  "ticket-dedupe": jsonBlock(DEDUPE_PRO),
+  "invoice-reconcile": jsonBlock(INVOICE_PRO),
+  "request-taxonomy": jsonBlock(TAXONOMY_PRO),
+  "log-to-incidents": jsonBlock(LOGS_PRO),
+};

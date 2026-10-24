@@ -1,0 +1,47 @@
+{
+  "id": "roster-cleanup",
+  "title": "Normalize a messy employee roster",
+  "category": "data",
+  "starter": true,
+  "order": 16,
+  "summary": "HR exported a roster with last-first names, mixed dates, a blank line, and a TOTAL row. The directory wants one shape.",
+  "whatWeTest": [
+    "Last, First names flip to First Last. Other names stay, trimmed.",
+    "Emails are lowercase. Titles and locations are trimmed.",
+    "Dates become YYYY-MM-DD, including M/D/YY and D-Mon-YYYY.",
+    "Blank rows and the TOTAL row are dropped."
+  ],
+  "outputHint": "Reply with one ```json fence and no other text.",
+  "fixtures": [
+    "fixtures/roster.csv"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.55,
+      "prompt": "Does the structured result follow the cleanup rules?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Is the output the requested JSON shape and nothing else?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.15,
+      "prompt": "Are the field values unambiguous?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

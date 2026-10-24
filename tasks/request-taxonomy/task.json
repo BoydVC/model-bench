@@ -1,0 +1,45 @@
+{
+  "id": "request-taxonomy",
+  "title": "Classify internal requests",
+  "category": "data",
+  "starter": true,
+  "order": 19,
+  "summary": "The director's inbox is eight requests. They need a label, not a reply, and two of them are easy to misread.",
+  "whatWeTest": [
+    "Each request gets one of access, incident, data, vendor, or other.",
+    "A locked-out employee is access. A replica request is data. Toner is other."
+  ],
+  "outputHint": "Reply with one ```json fence and no other text.",
+  "fixtures": [
+    "fixtures/requests.json"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.55,
+      "prompt": "Does the structured result follow the cleanup rules?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Is the output the requested JSON shape and nothing else?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.15,
+      "prompt": "Are the field values unambiguous?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

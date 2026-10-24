@@ -1,0 +1,45 @@
+{
+  "id": "meeting-tool-schema",
+  "title": "Tool schema for a scheduling agent",
+  "category": "coding",
+  "starter": true,
+  "order": 3,
+  "summary": "The scheduling agent needs a tool that proposes a hold and does not send the invite itself.",
+  "whatWeTest": [
+    "The tool is named propose_meeting and says it does not send invites.",
+    "Parameters are a closed object.",
+    "title, attendees, start, end, and timezone are required.",
+    "attendees is an array of strings."
+  ],
+  "outputHint": "Reply with one JSON object and no markdown fence.",
+  "fixtures": [],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.5,
+      "prompt": "Does the solution do what the task asked, including the edge cases?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Does it follow the output contract and the constraints a test might only partly see?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.2,
+      "prompt": "Could a teammate maintain this without a rewrite?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

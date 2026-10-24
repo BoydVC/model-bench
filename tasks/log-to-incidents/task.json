@@ -1,0 +1,46 @@
+{
+  "id": "log-to-incidents",
+  "title": "Turn an error log into an incident table",
+  "category": "data",
+  "starter": true,
+  "order": 20,
+  "summary": "A JSONL export mixes info lines and errors. The director wants one row per failing trace, not one row per line.",
+  "whatWeTest": [
+    "Only error lines count, grouped by trace.",
+    "firstSeen, service, count, and sample come from the first error in the trace.",
+    "Info-only traces are omitted."
+  ],
+  "outputHint": "Reply with one ```json fence and no other text.",
+  "fixtures": [
+    "fixtures/logs.jsonl"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.55,
+      "prompt": "Does the structured result follow the cleanup rules?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Is the output the requested JSON shape and nothing else?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.15,
+      "prompt": "Are the field values unambiguous?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

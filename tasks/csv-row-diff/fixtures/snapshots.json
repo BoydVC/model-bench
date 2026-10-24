@@ -1,0 +1,22 @@
+{
+  "key": "id",
+  "before": [
+    {
+      "id": "INV-1",
+      "status": "open",
+      "owner": "sam"
+    }
+  ],
+  "after": [
+    {
+      "id": "INV-1",
+      "status": "paid",
+      "owner": "sam"
+    },
+    {
+      "id": "INV-2",
+      "status": "open",
+      "owner": "mei"
+    }
+  ]
+}

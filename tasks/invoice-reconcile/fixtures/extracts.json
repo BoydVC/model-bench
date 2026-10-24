@@ -1,0 +1,54 @@
+{
+  "billing": [
+    {
+      "id": "B1",
+      "vendor": "Northline Inc",
+      "date": "2026-04-02",
+      "amount": 48000
+    },
+    {
+      "id": "B2",
+      "vendor": "Harbor LLC",
+      "date": "2026-04-04",
+      "amount": 1200.4
+    },
+    {
+      "id": "B3",
+      "vendor": "Pell",
+      "date": "2026-04-10",
+      "amount": 300
+    },
+    {
+      "id": "B4",
+      "vendor": "Paper Co",
+      "date": "2026-04-12",
+      "amount": 80
+    }
+  ],
+  "card": [
+    {
+      "id": "C1",
+      "vendor": "NORTHLINE",
+      "date": "2026-04-03",
+      "amount": 48000
+    },
+    {
+      "id": "C2",
+      "vendor": "Harbor",
+      "date": "2026-04-06",
+      "amount": 1200
+    },
+    {
+      "id": "C3",
+      "vendor": "Staples",
+      "date": "2026-04-11",
+      "amount": 42.1
+    },
+    {
+      "id": "C4",
+      "vendor": "Pell Incorporated",
+      "date": "2026-04-18",
+      "amount": 300
+    }
+  ]
+}

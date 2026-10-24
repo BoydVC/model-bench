@@ -1,0 +1,47 @@
+{
+  "id": "csv-row-diff",
+  "title": "Diff two snapshots of a finance table",
+  "category": "coding",
+  "starter": true,
+  "order": 4,
+  "summary": "Finance exports the same table twice a day. The director wants added, removed, and changed rows, not a wall of cells.",
+  "whatWeTest": [
+    "Added and removed rows are detected by key.",
+    "A changed row lists only the fields that differ, as from/to.",
+    "The key field and unchanged fields stay out of the change list.",
+    "Identical snapshots produce an empty diff."
+  ],
+  "outputHint": "Reply with one ```js fence that assigns functions on module.exports. No other text.",
+  "fixtures": [
+    "fixtures/snapshots.json"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.5,
+      "prompt": "Does the solution do what the task asked, including the edge cases?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Does it follow the output contract and the constraints a test might only partly see?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.2,
+      "prompt": "Could a teammate maintain this without a rewrite?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

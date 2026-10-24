@@ -1,0 +1,50 @@
+[
+  {
+    "id": "T1",
+    "requester": "a@ex.com",
+    "subject": "Cannot export invoices",
+    "createdAt": "2026-05-01T10:00:00Z"
+  },
+  {
+    "id": "T2",
+    "requester": "b@ex.com",
+    "subject": "SSO for contractors",
+    "createdAt": "2026-05-01T11:00:00Z"
+  },
+  {
+    "id": "T3",
+    "requester": "a@ex.com",
+    "subject": "cannot export invoices!!",
+    "createdAt": "2026-05-01T12:00:00Z"
+  },
+  {
+    "id": "T4",
+    "requester": "c@ex.com",
+    "subject": "VPN drop",
+    "createdAt": "2026-05-02T09:00:00Z"
+  },
+  {
+    "id": "T5",
+    "requester": "d@ex.com",
+    "subject": "VPN drop",
+    "createdAt": "2026-05-02T09:30:00Z"
+  },
+  {
+    "id": "T6",
+    "requester": "a@ex.com",
+    "subject": "Webhook delay",
+    "createdAt": "2026-05-03T08:00:00Z"
+  },
+  {
+    "id": "T7",
+    "requester": "a@ex.com",
+    "subject": "Webhook delay.",
+    "createdAt": "2026-05-03T20:00:00Z"
+  },
+  {
+    "id": "T8",
+    "requester": "a@ex.com",
+    "subject": "Webhook delay",
+    "createdAt": "2026-05-06T08:00:00Z"
+  }
+]

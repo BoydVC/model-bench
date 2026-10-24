@@ -1,0 +1,65 @@
+# Models Model Bench can call.
+# Add a block, export its env vars, then:
+#   npm run bench -- --model your-model --tasks starter
+#
+# provider: openai-compatible | anthropic
+# env_key: the variable that holds the API key
+# env_base_url: optional variable for a custom base URL
+#   openai-compatible defaults to https://api.openai.com/v1
+#   anthropic defaults to https://api.anthropic.com
+# Rates are USD per million tokens and are used for the cost column.
+
+models:
+  - id: cedar-pro
+    label: Cedar Pro
+    provider: openai-compatible
+    env_key: CEDAR_PRO_API_KEY
+    env_base_url: CEDAR_PRO_BASE_URL
+    model: cedar-pro
+    input_usd_per_mtok: 15
+    output_usd_per_mtok: 60
+    demo: true
+    blurb: Fictional stand-in for a slow, expensive model. Recorded answers only.
+
+  - id: cedar-flash
+    label: Cedar Flash
+    provider: openai-compatible
+    env_key: CEDAR_FLASH_API_KEY
+    env_base_url: CEDAR_FLASH_BASE_URL
+    model: cedar-flash
+    input_usd_per_mtok: 0.15
+    output_usd_per_mtok: 0.6
+    demo: true
+    blurb: Fictional stand-in for a cheap, fast model. Recorded answers only.
+
+  - id: inkwell
+    label: Inkwell
+    provider: openai-compatible
+    env_key: INKWELL_API_KEY
+    env_base_url: INKWELL_BASE_URL
+    model: inkwell
+    input_usd_per_mtok: 2
+    output_usd_per_mtok: 8
+    demo: true
+    blurb: Fictional stand-in that writes well and implements poorly. Recorded answers only.
+
+  - id: surveyor
+    label: Surveyor
+    provider: openai-compatible
+    env_key: SURVEYOR_API_KEY
+    env_base_url: SURVEYOR_BASE_URL
+    model: surveyor
+    input_usd_per_mtok: 3
+    output_usd_per_mtok: 12
+    demo: true
+    blurb: Fictional stand-in for research and classification. Recorded answers only.
+
+  # Copy this block to add a model. A first run of one task is the wiring check.
+  # - id: your-model
+  #   label: Your Model
+  #   provider: openai-compatible
+  #   env_key: YOUR_MODEL_API_KEY
+  #   env_base_url: YOUR_MODEL_BASE_URL
+  #   model: your-model-name
+  #   input_usd_per_mtok: 1
+  #   output_usd_per_mtok: 3

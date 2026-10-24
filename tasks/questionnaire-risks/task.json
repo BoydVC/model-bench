@@ -1,0 +1,46 @@
+{
+  "id": "questionnaire-risks",
+  "title": "Risks from a security questionnaire",
+  "category": "research",
+  "starter": true,
+  "order": 13,
+  "summary": "A vendor's questionnaire is half reassurance and half gap. The extract should name four risks and leave the encrypted-at-rest answer alone.",
+  "whatWeTest": [
+    "The four risk ids are present with the severity the prompt assigns.",
+    "Each evidence string uses wording from the questionnaire.",
+    "Invented risks are penalized."
+  ],
+  "outputHint": "Reply with one JSON object and no markdown fence.",
+  "fixtures": [
+    "fixtures/questionnaire.md"
+  ],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Fidelity",
+      "weight": 0.45,
+      "prompt": "Are the claims grounded in the source, with gaps marked instead of filled in?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.35,
+      "prompt": "Does it answer the decision the director actually has to make?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.2,
+      "prompt": "Can someone scan this in a few minutes and know what to do?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.5,
+    "judge": 0.5
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

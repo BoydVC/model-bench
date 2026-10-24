@@ -1,0 +1,45 @@
+{
+  "id": "retry-helper",
+  "title": "Retry helper with an injected sleep",
+  "category": "coding",
+  "starter": true,
+  "order": 1,
+  "summary": "Agent tools keep growing their own retry loops. The platform team wants one helper tests can drive without a real timer.",
+  "whatWeTest": [
+    "Returns the first successful value and does not sleep after it.",
+    "Retries until success and stops at the attempt limit.",
+    "Throws the last error, not a new wrapper.",
+    "Passes the failed attempt number to the injected sleep."
+  ],
+  "outputHint": "Reply with one ```js fence that assigns functions on module.exports. No other text.",
+  "fixtures": [],
+  "rubric": [
+    {
+      "id": "correctness",
+      "label": "Correctness",
+      "weight": 0.5,
+      "prompt": "Does the solution do what the task asked, including the edge cases?"
+    },
+    {
+      "id": "constraints",
+      "label": "Constraints",
+      "weight": 0.3,
+      "prompt": "Does it follow the output contract and the constraints a test might only partly see?"
+    },
+    {
+      "id": "clarity",
+      "label": "Clarity",
+      "weight": 0.2,
+      "prompt": "Could a teammate maintain this without a rewrite?"
+    }
+  ],
+  "qualityWeights": {
+    "auto": 0.75,
+    "judge": 0.25
+  },
+  "checks": [
+    {
+      "type": "harness"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "R1",
+    "text": "Please add Sam to the billing GitHub org."
+  },
+  {
+    "id": "R2",
+    "text": "Checkout has been erroring for 20 minutes, customers cannot pay."
+  },
+  {
+    "id": "R3",
+    "text": "Can you pull a list of invoices over $10k for Q1?"
+  },
+  {
+    "id": "R4",
+    "text": "Northline sent a renewal quote. Can someone review it before Friday?"
+  },
+  {
+    "id": "R5",
+    "text": "The office printer on 4 is out of toner."
+  },
+  {
+    "id": "R6",
+    "text": "We need a read replica for the invoice table before month end."
+  },
+  {
+    "id": "R7",
+    "text": "Priya is locked out of Okta and cannot page."
+  },
+  {
+    "id": "R8",
+    "text": "Harbor wants a security questionnaire filled in by Thursday."
+  }
+]
